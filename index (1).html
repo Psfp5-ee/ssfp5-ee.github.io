@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VenomShop - Mobile Legends Diamonds</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h1>VenomShop</h1>
+            <p>Мини-приложение</p>
+        </header>
+
+        <!-- Main Content (Dynamic via JavaScript) -->
+        <main id="main-content">
+            <!-- Catalog will be injected here -->
+            <section id="catalog" class="section">
+                <h2>Каталог</h2>
+                <div id="catalog-items" class="grid"></div>
+            </section>
+
+            <!-- Cart -->
+            <section id="cart" class="section hidden">
+                <h2>Корзина</h2>
+                <div id="cart-items"></div>
+                <div id="cart-total">К оплате: 0.00 ₽</div>
+                <button id="checkout-btn">Оформить заказ</button>
+                <div id="payment-options">
+                    <label><input type="radio" name="payment-method" value="balance" checked> Оплатить с баланса</label>
+                    <label><input type="radio" name="payment-method" value="external"> Оплатить через систему</label>
+                </div>
+            </section>
+
+            <!-- Profile -->
+            <section id="profile" class="section hidden">
+                <h2>Профиль</h2>
+                <p>Пользователь: @<span id="user-username">User</span> (ID: <span id="user-id">12345</span>)</p>
+                <p>Баланс: <span id="user-balance">0.00 ₽</span></p>
+                <button id="add-balance-btn">Пополнить баланс</button>
+                <div id="balance-form" class="hidden">
+                    <input type="number" id="balance-amount" placeholder="Сумма в рублях" min="1">
+                    <button id="submit-balance">Пополнить</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Fixed Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button id="nav-catalog" class="active">Каталог</button>
+            <button id="nav-cart">Корзина</button>
+            <button id="nav-profile">Профиль</button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>

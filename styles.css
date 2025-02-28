@@ -1,0 +1,163 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1a0d2b; /* Dark purple-black for Venom vibe */
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 2px solid #ff0000; /* Red accent for Venom */
+}
+
+header h1 {
+    font-size: 24px;
+    color: #ff0000;
+}
+
+header p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.section {
+    padding: 20px;
+    display: none;
+}
+
+.section h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background-color: #2d1a3d; /* Darker purple for item cards */
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    background-color: #3d2a4d;
+}
+
+.item img {
+    max-width: 100px;
+    height: auto;
+}
+
+.item p {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.item .price {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#cart-items, #cart-total {
+    margin: 20px 0;
+    color: #fff;
+}
+
+#cart-total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+.hidden {
+    display: none;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 2px solid #ff0000;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.bottom-nav button.active {
+    color: #ff0000;
+}
+
+.bottom-nav button:hover {
+    color: #ff3333;
+}
+
+#payment-options label {
+    margin-right: 20px;
+    color: #fff;
+}
+
+#balance-form {
+    margin-top: 20px;
+}
+
+#balance-form input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    background-color: #1a0d2b;
+    color: #fff;
+}
+
+#balance-form button {
+    margin-left: 10px;
+}
